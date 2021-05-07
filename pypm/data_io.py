@@ -3,12 +3,14 @@ import pandas as pd
 from pandas import DataFrame
 from typing import Dict, List, Tuple
 
+# added '' around __file__ argument, also removed '..' from os.path.dirname()
 DATA_DIR = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), 
-    '..',
-    '..',
+    os.path.dirname(os.path.abspath('__file__')), 
+#    '..',
+#    '..',
     'data',
 )
+
 EOD_DATA_DIR = os.path.join(DATA_DIR, 'eod')
 ALTERNATIVE_DATA_DIR = os.path.join(DATA_DIR, 'alternative_data')
 
